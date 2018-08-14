@@ -1,5 +1,9 @@
 import random
-r = random.randint(1, 100)
+start = input('请决定随机数的开始值: ')
+end = input('请决定随机数的结束值: ')
+start = int(start)
+end = int(end)
+r = random.randint(start, end)
 count = 0
 while True:
 	count = count + 1
@@ -7,6 +11,7 @@ while True:
 	num = int(num)
 	if num == r:
 		print('你猜中了！')
+		print('这是你猜的第', count , '次！')
 		break
 	elif num > r:
 		print('比答案大！')
